@@ -90,6 +90,9 @@ int main(void)
   MX_GPIO_Init();
   MX_FDCAN1_Init();
   /* USER CODE BEGIN 2 */
+  HAL_FDCAN_Start(&hfdcan1);
+  FDCAN_RxHeaderTypeDef messageHeader;
+  uint8_t buffer[8] = {0};
 
   /* USER CODE END 2 */
 
@@ -98,7 +101,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    if(HAL_FDCAN_GetRxFifoFillLevel(&hfdcan1, 0) > 0){
+      HAL_FDCAN_GetRxMessage(&hfdcan1, FDCAN_RX_FIFO0, &messageHeader, &buffer);
+      HAL_GPIO_TogglePin(GPIOB, 11);
+    }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
