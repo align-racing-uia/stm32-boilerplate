@@ -1,16 +1,11 @@
-# stm32-boilerplate
-A boilerplate project for STM32 applications
+# How to setup a STM32 project for Align Racing?
 
-# How to set up a project like this?
-
-1. Download and install MSYS2 from [here](https://www.msys2.org/) using the windows installer.
-2. In the MSYS2 UCRT32 application, run ```pacman -S mingw-w64-ucrt-x86_64-gcc``` and ```pacman -S make```.
-3. Add ```C:/msys64/usr/bin``` and ```C:/msys64/ucrt64/bin``` to the PATH ([Guide here](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/))
-4. Download and install VSCode from [here](https://code.visualstudio.com/).
-5. Install the extension named 'STM32 VS Code Extenstion' in VSCode (You can find VSCode extenstions in the left toolbar, with 4 blocks as a symbol).
-6. Download and install [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html) and [STM32CubeCLT](https://www.st.com/en/development-tools/stm32cubeclt.html).
-7. If needed, help the extension find the locations of the CubeMX and the CLT.
-8. Launch STM32CubeMX, and configure the project to use the microcontroller you need (Use e.g. stm32g431cbt6 for testing), and hit "Start Project".
-9. Under "Project Manager" set a reasonable project name, and a project location you want to have the project in. The Toolchain / IDE must be CMake.
-10. Hit "Generate Code", then use the VSCode extension (A butterfly icon on the left bar) to "Import CMake Project".
-11. Try to Build the project, by using the toolbar on the bottom of VSCode.
+1. Download and install [VSCode](https://code.visualstudio.com/)
+2. Download and install [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html)
+3. In VSCode download and install the extension "STM32 for VSCode"
+4. In STM32CubeMX Create a new project by clicking "Access to MCU Selector"
+5. Select the MCU you are going to use, or search for "STM32G491CET6" if you are only configuring your computer, and click "Start Project".
+6. Under the tab "Project Manager", choose a fitting Project name, Project Location and *set the Toolchain / IDE to Makefile*.
+7. Open the new project folder in VSCode, open "STM32 for VSCode" in the sidebar of VSCode.
+8. Click "Install Build Tools", and wait for the process to finish.
+9. Try to Build!
