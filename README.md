@@ -8,7 +8,6 @@
 7. In STM32CubeMX Create a new project by clicking "Access to MCU Selector"
 8. Select the MCU you are going to use, or search for "STM32G431CBT6" if you are only configuring for a test, and click "Start Project".
 9. Under the tab "Project Manager", choose a fitting Project name, Project Location and **set the Toolchain / IDE to CMake**.
-10. Import the CMake project in the extenstion.
-11. Open the new project folder in VSCode.
-12. You can now find the different build commands under the "Run and Debug" tab in VSCode.
-13. Try to Build!
+10. Open the new project folder in VSCode.
+11. You can now find the different build commands under the "Run and Debug" tab in VSCode.
+12. Try to Build!
