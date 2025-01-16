@@ -12,3 +12,7 @@
 11. Open the new project folder in VSCode.
 12. You can now find the different build commands under the "Run and Debug" tab in VSCode.
 13. Try to Build!
+
+
+# Extra
+If you want extra functionality, e.g. printing through RTT, and some nifty Align functions, you should go to [Align Standard Library](https://github.com/align-racing-uia/align_standard_library/tree/AR25) and follow the guide there as well.
